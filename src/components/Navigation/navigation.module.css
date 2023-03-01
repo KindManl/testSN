@@ -1,0 +1,12 @@
+.NavLink {
+    text-decoration: none;
+}
+
+.NavLink:hover {
+    background-color: #ececec;
+    border-radius: 5px;
+}
+
+.NavLink:active {
+    color: black;
+}

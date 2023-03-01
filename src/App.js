@@ -1,13 +1,12 @@
 import './App.css';
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
-import Footer from "./components/Footer/Footer";
 import Body from "./components/Body/Body";
 import React from "react";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, NavLink} from "react-router-dom";
 
 
-function App() {
+const App = () => {
     return (
         <BrowserRouter>
             <div className='app'>
@@ -15,7 +14,7 @@ function App() {
                     <Header/>
                     <div className='n'><Navigation/></div>
                     <div className='b'><Body/></div>
-                    <div className='f'><Footer/></div>
+                    <NavLink className="i" to="/"><img className='i' src="https://flyclipart.com/thumb2/course-info-150157.png"></img></NavLink>
                 </div>
             </div>
         </BrowserRouter>

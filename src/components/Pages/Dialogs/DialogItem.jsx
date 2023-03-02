@@ -5,7 +5,7 @@ import s from '../../Navigation/navigation.module.css'
 function DialogItem(props) {
     return (
         <div>
-            <NavLink to={"dialogs/" + props.id} className={s.NavLink}>{props.name}</NavLink>
+            <NavLink to={"/dialogs/" + props.id} className={s.NavLink}>{props.name} {props.message}</NavLink>
         </div>
     );
 }

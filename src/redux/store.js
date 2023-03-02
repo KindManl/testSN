@@ -1,14 +1,11 @@
 import {combineReducers, createStore} from "redux";
-import addPost from "./reducers/addPost";
-
-
+import dialogsReducer from "./reducers/dialogReducer";
 
 let reducers = combineReducers({
-    addPost
+    dialogsReducer
 });
 
 let store = createStore(reducers);
-
 
 
 export default store;

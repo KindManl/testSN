@@ -3,13 +3,12 @@ import DialogItem from "./DialogItem";
 
 
 function Dialogs(props) {
+
+    let dataItemed = props.state.map(dialog => <DialogItem name={dialog.name} id={dialog.id} message={dialog.message}/>)
+
     return (
         <div>
-            <DialogItem name="alis" id={0}/>
-            <DialogItem name="sasha" id={1}/>
-            <DialogItem name="pasha" id={2}/>
-            <DialogItem name="oleg" id={3}/>
-            <DialogItem name="gavs" id={4}/>
+            {dataItemed}
         </div>
 
     );

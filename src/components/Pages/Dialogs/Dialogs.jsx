@@ -3,12 +3,11 @@ import DialogItem from "./DialogItem";
 
 
 function Dialogs(props) {
-
-    let dataItemed = props.state.map(dialog => <DialogItem name={dialog.name} id={dialog.id} message={dialog.message}/>)
+    let dialogList = props.dialogList.map(dialog => <DialogItem name={dialog.name} key={dialog.id} message={dialog.message}/>)
 
     return (
         <div>
-            {dataItemed}
+            {dialogList}
         </div>
 
     );

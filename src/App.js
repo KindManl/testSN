@@ -7,13 +7,12 @@ import {NavLink} from "react-router-dom";
 
 
 const App = (props) => {
-
     return (
         <div className='app'>
             <div className='app-wrapper'>
                 <Header/>
                 <div className='n'><Navigation/></div>
-                <div className='b'><Body state={props.state} dispatch={props.dispatch}/></div>
+                <div className='b'><Body/></div>
                 <NavLink className="i" to="/"><img className='i'
                                                    src="https://flyclipart.com/thumb2/course-info-150157.png"></img></NavLink>
             </div>

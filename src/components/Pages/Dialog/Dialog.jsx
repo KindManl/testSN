@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 
 
-function Dialog(props) {
 
+function Dialog(props) {
     let [newMessage, setNewMessage] = useState("");
     let sendMessage = () => {
-        props.dispatch({type:'DIALOGS/SEND_MESSAGE', message: newMessage});
+        props.newMessage(newMessage);
         setNewMessage("");
 
     }
@@ -15,7 +15,7 @@ function Dialog(props) {
         setNewMessage(e.target.value);
     }
 
-    let messages = props.state.map(dialog => <div>{dialog.message}</div>)
+    let messages = props.messages.map(dialog => <div key={dialog.id}>{dialog.message}</div>)
     return (
         <div>
             <div>{messages}</div>

@@ -4,21 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import fakeStore, {subscribe} from "./fakeState/fakeStore";
+import redux_store from "./redux/redux_store";
+import {Provider} from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-let rerenderEntireTree = () => {
-    root.render(
-        <BrowserRouter>
-            <App state={fakeStore.state} dispatch={fakeStore.dispatch.bind(fakeStore)}/>
-        </BrowserRouter>
-    )
-}
-
-rerenderEntireTree();
-
-subscribe(rerenderEntireTree);
+root.render(
+    <BrowserRouter>
+        <Provider store={redux_store}>
+            <App/>
+        </Provider>
+    </BrowserRouter>
+)
 
 
 // If you want to start measuring performance in your app, pass a function

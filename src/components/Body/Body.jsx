@@ -4,7 +4,7 @@ import Friends from "../Pages/Friends/Friends";
 import Music from "../Pages/Music/Music";
 import Settings from "../Pages/Settings/Settings";
 import DialogContainer from "../Pages/Dialog/DialogContainer";
-import UsersContainer from "../Pages/People/UsersContainer";
+import UsersContainer from "../Pages/Users/UsersContainer";
 import {Route, Routes} from "react-router-dom";
 
 function Body(props) {
